@@ -20,6 +20,15 @@
     ],
     "start_url": "../../",
     "display": "standalone",
-    "theme_color": "#f4f4f4",
-    "background_color": "#ffffff"
+    "theme_color": "#2f3a3f",
+    "background_color": "#ffffff",
+    "protocol_handlers": [
+        {
+            "protocol": "mailto",
+            "url": "?_task=mail&_action=compose&_to=%s"
+        }
+    ],
+    "launch_handler": {
+        "client_mode": "focus-existing"
+    }
 }
