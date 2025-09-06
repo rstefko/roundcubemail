@@ -1,4 +1,10 @@
+- Fix invalid line break characters in multi-line text in Sieve scripts (#9543)
 - Fix javascript error when relational or spamtest extension is not enabled (#9139)
+- Support an array in managesieve_host option (#9447)
+- Protect special scripts in managesieve_kolab_master mode
+- Fix infinite loop when parsing a malformed script (#9562)
+- Fix current script state after initial scripts creation in managesieve_kolab_master mode
+- Fix match-type selector (remove unsupported options) in delete header action (#9610)
 
 * version 9.5 [2023-03-26]
 -----------------------------------------------------------
@@ -331,7 +337,7 @@
 -----------------------------------------------------------
 - Support multiple managesieve hosts using %h variable
   in managesieve_host option
-- Fix first rule deleting (#1486140) 
+- Fix first rule deleting (#1486140)
 
 * version 1.6 [2009-09-08]
 -----------------------------------------------------------

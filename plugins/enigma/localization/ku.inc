@@ -1,6 +1,6 @@
 <?php
 
-/**
+/*
  +-----------------------------------------------------------------------+
  | Localization file of the Roundcube Webmail Enigma plugin              |
  |                                                                       |
@@ -14,9 +14,12 @@
  For translation see https://www.transifex.com/roundcube/roundcube-webmail/plugin-enigma/
 */
 
+$labels['encryption'] = 'Şîfrekirin';
 $labels['keyname'] = 'Nav';
+$labels['subkeyid'] = 'NN';
 $labels['subkeycreated'] = 'Hat afirandin';
 $labels['expiresnever'] = 'qet';
 $labels['unknown'] = 'nenas';
+$labels['userid'] = 'NN';
 $labels['keychpass'] = 'Şîfreyê biguherîne';
 $labels['newkeypass'] = 'Nasnav';

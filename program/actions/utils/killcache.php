@@ -1,6 +1,6 @@
 <?php
 
-/**
+/*
  +-----------------------------------------------------------------------+
  | This file is part of the Roundcube Webmail client                     |
  |                                                                       |
@@ -24,6 +24,7 @@ class rcmail_action_utils_killcache extends rcmail_action
      *
      * @param array $args Arguments from the previous step(s)
      */
+    #[\Override]
     public function run($args = [])
     {
         $rcmail = rcmail::get_instance();
@@ -31,31 +32,31 @@ class rcmail_action_utils_killcache extends rcmail_action
         // don't allow public access if not in devel_mode
         if (!$rcmail->config->get('devel_mode')) {
             http_response_code(401);
-            die("Access denied!");
+            exit('Access denied!');
         }
 
         // @TODO: transaction here (if supported by DB) would be a good thing
-        $res = $rcmail->db->query("DELETE FROM " . $rcmail->db->table_name('cache', true));
+        $res = $rcmail->db->query('DELETE FROM ' . $rcmail->db->table_name('cache', true));
         if ($err = $rcmail->db->is_error($res)) {
             exit($err);
         }
 
-        $res = $rcmail->db->query("DELETE FROM " . $rcmail->db->table_name('cache_shared', true));
+        $res = $rcmail->db->query('DELETE FROM ' . $rcmail->db->table_name('cache_shared', true));
         if ($err = $rcmail->db->is_error($res)) {
             exit($err);
         }
 
-        $res = $rcmail->db->query("DELETE FROM " . $rcmail->db->table_name('cache_messages', true));
+        $res = $rcmail->db->query('DELETE FROM ' . $rcmail->db->table_name('cache_messages', true));
         if ($err = $rcmail->db->is_error($res)) {
             exit($err);
         }
 
-        $res = $rcmail->db->query("DELETE FROM " . $rcmail->db->table_name('cache_index', true));
+        $res = $rcmail->db->query('DELETE FROM ' . $rcmail->db->table_name('cache_index', true));
         if ($err = $rcmail->db->is_error($res)) {
             exit($err);
         }
 
-        $res = $rcmail->db->query("DELETE FROM " . $rcmail->db->table_name('cache_thread', true));
+        $res = $rcmail->db->query('DELETE FROM ' . $rcmail->db->table_name('cache_thread', true));
         if ($err = $rcmail->db->is_error($res)) {
             exit($err);
         }

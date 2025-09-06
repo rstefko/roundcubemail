@@ -160,7 +160,6 @@ $messages['nogroupassignmentschanged'] = 'Nebylo změněno přiřazení do skupi
 $messages['importwait'] = 'Importuji, prosím čekejte...';
 $messages['importformaterror'] = 'Import se nezdařil! Typ souboru není podporován.';
 $messages['importconfirm'] = 'Úspěšně naimportováno $inserted kontaktů, $skipped existujících záznamů přeskočeno: $names';
-$messages['importconfirmskipped'] = '<b>Přeskočeno $skipped existujících položek</b>';
 $messages['importmessagesuccess'] = 'Naimportováno $nr zpráv';
 $messages['importmessageerror'] = 'Import se nezdařil! Nahraný soubor není platnou zprávou nebo souborem mailboxu';
 $messages['opnotpermitted'] = 'Operace není povolena!';
